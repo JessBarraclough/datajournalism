@@ -1,0 +1,112 @@
+<DOCTYPE! html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+   <style>
+    #map-canvas { width:1000px; height:500px; }
+    .layer-wizard-search-label { font-family: sans-serif };
+  </style>
+  <script type="text/javascript"
+    src="http://maps.google.com/maps/api/js?sensor=false">
+  </script>
+  <script type="text/javascript">
+    var map;
+    var layer_0;
+    var layer_1;
+    function initialize() {
+      map = new google.maps.Map(document.getElementById('map-canvas'), {
+        center: new google.maps.LatLng(-33.931740554074366, 18.83745487158194),
+        zoom: 9,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+      layer_0 = new google.maps.FusionTablesLayer({
+        query: {
+          select: "col2",
+          from: "1DLrjIzVxv14bxV_cTTMCpMvL6KoBtASLl38A5B4m"
+        },
+        map: map,
+        styleId: 6,
+        templateId: 6
+      });
+      layer_1 = new google.maps.FusionTablesLayer({
+        query: {
+          select: "col2",
+          from: "1DLrjIzVxv14bxV_cTTMCpMvL6KoBtASLl38A5B4m"
+        },
+        map: map,
+        styleId: 2,
+        templateId: 2
+      });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+  </head>
+<body>
+    
+    <main>
+    
+    
+    <div class="pageIntro">
+        
+      <h1>Is The City of Cape Town Really Pro-poor?</h1>
+        <h2>A carefull collation of the City of Cape Town's proposed 2017/18 Capital Budget data - especially that of the 'Safety and Security' directorate - reveals that the municipal government may not be as 'pro-poor' as it claims to be.</h2>
+        </div>
+    
+        <div class="buttonContainer">
+            
+        <nav>
+            <ul>
+            <li><a href="index.html">English</a></li>
+                <li><a href="data_journalism%20afr.html">Afrikaans</a></li>
+            </ul>
+            </nav>
+        </div>
+    <article id="dataJournalism">
+           
+        <!-- container for profile article
+                      can be removed from context and placed on another page-->       
+            
+            <p class="bodyText">
+             The Western Cape Provincial Government defines 'poverty income' as "the minimum monthly income needed to sustain a household", which varies depending on the household size. According to their definition, a single-person household earning anything over R15 780 a year would not qualify as living in poverty. For the average four-person household, that figure is R30 528. Arguably, what constitutes the 'poor', then, to the City of Cape Town is quite a small, 'extreme' portion of the population. Regardless, even according to this definition of 'poor', it isn't always evident that the City is as 'pro-poor' as it claims to be.
+             <br><br>   
+             By focusing on the data surrounding a single directorate or 'vote' within the City of Cape Town's recently-proposed 2017/18 fiscal year budget, correlations between household income figures and the City's budget focus become self-evident. In this case, the directorate in question is 'Vote 9' - Safety and Security. The directorate is responsible for the City's efforts towards crime prevention and citizen safety. The visualisations below track the City's capital budget expenditure for two years prior to the 2017/18 year, and further include the proposed budget for years 2017/18, 2018/19 and 2019/20.    
+           </p>
+        
+        <div class="interactFigure"><iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1wl4bIeWIu1xJHENkirZmIR3U75dah7R3NMhzVUj1POM/pubchart?oid=349671504&amp;format=interactive"></iframe>
+        <br><br>
+        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1wl4bIeWIu1xJHENkirZmIR3U75dah7R3NMhzVUj1POM/pubchart?oid=1018576409&amp;format=interactive"></iframe>
+            </div>
+        
+        <p class="bodyText">
+        Furthermore, the Capital Budget proposed by the City of Cape Town for the 2017/18 year was mapped out per ward according to the amount allocated to 'Safety and Security' Capital projects in each ward, as seen below. The red-to-blue gradient represents the average (median) annual household income of each ward, with the 'poorest' wards in red, and the more affluent wards in blue. The tonal gradient, ranging from dark to light, represents the 'Safety and Security' Capital budget per ward, with darker wards receiving very little budget focus, and lighter wards receiving more of the capital expenditure attention.  
+        </p>
+        
+        <div class="legendContainer">
+            <img src="redblue_legend.jpg" id="redblue">
+            
+            <img src="blackwhite_legend.jpg" id="blackwhite">
+            <br class="clear">
+            </div>
+        
+            <div class="interactFigure"><div id="map-canvas"></div></div>
+            
+        
+        <div class="interactFigure">
+        <img src="redblue.jpg"><img src="blackwhite.jpg">
+        </div>
+           
+       </article> 
+       
+        
+    </main>
+     <footer>
+        <p>
+        Written by: Jessica Barraclough
+            <br>
+            Translated by: Wesley Kemp and Jessica Barraclough
+        </p>
+    </footer>
+        
+</body> 
+     
+</html>
